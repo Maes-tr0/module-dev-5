@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>F:/ProjectsOn(Java)/module-dev-5</OriginalElement>
+  <nodes>
+    <node x="-107.0" y="467.0">ua.example.algorithm.IterativeFibonacci</node>
+    <node x="-107.0" y="213.0">ua.example.algorithm.FibonacciCalculator</node>
+    <node x="453.0" y="467.0">ua.example.algorithm.DynamicFibonacci</node>
+    <node x="-109.0" y="-15.0">ua.example.algorithm.FibonacciTest</node>
+    <node x="173.0" y="424.5">ua.example.algorithm.RecursiveFibonacci</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ua.example.algorithm.DynamicFibonacci" target="ua.example.algorithm.FibonacciCalculator" relationship="REALIZATION">
+      <point x="0.0" y="-45.0" />
+      <point x="572.0" y="392.0" />
+      <point x="12.0" y="392.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="ua.example.algorithm.IterativeFibonacci" target="ua.example.algorithm.FibonacciCalculator" relationship="REALIZATION">
+      <point x="0.0" y="-45.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="ua.example.algorithm.RecursiveFibonacci" target="ua.example.algorithm.FibonacciCalculator" relationship="REALIZATION">
+      <point x="0.0" y="-87.5" />
+      <point x="292.0" y="392.0" />
+      <point x="12.0" y="392.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.0362204724409452" showDependencies="true" x="80.4870820668695" y="302.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
