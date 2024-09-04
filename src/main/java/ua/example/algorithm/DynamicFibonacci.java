@@ -1,5 +1,8 @@
 package ua.example.algorithm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * DynamicFibonacci method
  *
@@ -7,8 +10,14 @@ package ua.example.algorithm;
  * Space Complexity: O(n).
  *
  */
-
 public class DynamicFibonacci implements FibonacciCalculator {
+    private static List<Long> fibArray = new ArrayList<>();
+
+    static {
+        fibArray.add(INITIAL_FIRST_VALUE);  // Відповідає INITIAL_FIRST_VALUE
+        fibArray.add(INITIAL_SECOND_VALUE);  // Відповідає INITIAL_SECOND_VALUE
+    }
+
     @Override
     public long findNumberByIndex(int userIndex) {
         int index = userIndex - 1;
@@ -17,16 +26,16 @@ public class DynamicFibonacci implements FibonacciCalculator {
         if (index == 1) return INITIAL_SECOND_VALUE;
         if (index < 0) throw new IllegalArgumentException("Index must be greater than 0");
 
-        long[] fibArray = new long[index + 1];
-
-        fibArray[0] = INITIAL_FIRST_VALUE;
-        fibArray[1] = INITIAL_SECOND_VALUE;
-
-        for (int i = 2; i <= index; i++) {
-            fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
+        if (index < fibArray.size()) {
+            return fibArray.get(index);
         }
 
-        return fibArray[index];
+        while (fibArray.size() <= index) {
+            int size = fibArray.size();
+            long nextFib = fibArray.get(size - 1) + fibArray.get(size - 2);  // Сума двох попередніх
+            fibArray.add(nextFib);
+        }
+
+        return fibArray.get(index);
     }
 }
-
